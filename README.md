@@ -1,34 +1,60 @@
-# JavaFX-BlackJack-Card-Game
+# JavaFX-Card-Game
 ## Overview:
-JavaFX card game application demonstrating object-oriented programming, MVC structure, FXML views, controls, and game state management.
+This project is a JavaFX GUI applciation developed for a card/deck management system.
+
+The purpose of this project was to build a visual interface that allows users to interact with an existing object-oriented model. The model classes and their relationships were already provided. The main task was to design and implement the GUI, controllers, event handling, and screen navigation.
 
 ## Gameplay Overview
 
-This project is a JavaFX Blackjack card game where the player plays against a dealer. The aim of the game is to get a hand value as close to 21 as possible without going over.
+This project is a JavaFX card game application where users interact with player, dealer, card, and deck objects through a graphical interface.
 
-The game includes separate views for the login/player setup, player gameplay, dealer gameplay, deck viewing, and win/result screens.
+The application allows the user to start a game, deal cards from primary and secondary decks, select cards, view card images, track player health, play rounds, and end the game through the dealer interface.
+
+The project focuses on applying object-oriented programming and MVC principles by separating the game data, user interface, and controller logic across model classes, FXML views, and Java controller classes.
 
 ## Related Project
-An earlier terminal-based version of this Blackjack game was also developed to practise the core game logic before extending the project into a JavaFX MVC application.
+This project builds on an earlier terminal-based Blackjack card game project, where the core model logic and object relationships were first introduced. This JavaFX version extends that work by replacing terminal input/output with a graphical user interface.
 
-## How the Game Works
+## How the Application Works
 
-1. The player starts the application and enters the required player details.
-2. The game creates a player, dealer, and card decks.
-3. Cards are dealt to the player and dealer.
-4. The player can view their cards and make gameplay decisions.
-5. The dealer manages the deck and dealer-side actions.
-6. The game checks the card values and determines the result.
-7. The winner screen displays the final outcome.
+1. The user starts the application and enters the required player details, including the player name. The first two players are hard-coded as part of the project requirements.
+   
+3. The user selects **Start Game** from the login interface to begin the game.
+  
+5. The dealer can click the **Deal** button to deal cards to each player. Cards are dealt from the primary deck, and one player receives an additional card from the secondary deck.
+
+6. The user can play a round to apply card damage and view each player’s remaining health in the dealer interface throughout the game.
+
+7. The user can choose to deal cards again. When this happens, the player receiving the secondary deck card changes to the next player.
+
+8. The user can play a round to apply card damage and view the remaining health of each player.
+
+9. The dealer can continue dealing cards and playing rounds until only one player remains.
+
+10. The dealer can also choose to end the game early using the **Call** button.
+
+## Error Handling
+The application includes error messages to guide the user when an invalid action is attempted.
+
+- If the user tries to add more than four cards to a player’s hand using the **Select** button, a **"Hand is full"** error message is displayed.
+
+- If the user tries to play a round before the players have selected a card, a **"Select a card"** error message is displayed.
+
+- If either the primary deck or secondary deck card list runs out of cards, an **"Out of cards"** error message is displayed.
 
 ## Features
 - JavaFX graphical user interface
 - Login/player setup screen
 - Dealer and player game views
-- Card and deck management
-- Blackjack game logic
+- Primary and secondary deck management
+- Card selection from deck lists and player hands
+- Card image display when a card is selected
+- Player health tracking throughout each round
+- Round-based card damage system
+- Error handling for invalid actions
 - MVC-based project structure
-- FXML views and controller classes
+- FXML views and Java controller classes
+- CSS styling for the interface
 
 ## Project Structure
 ```text
